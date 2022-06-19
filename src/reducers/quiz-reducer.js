@@ -14,7 +14,7 @@ const quizReducer = (state, action) => {
     case DECREMENT_TIME:
       return { ...state, time: state.time - 1 };
     case HAVE_COMPLETED_QUIZ:
-      return { ...state, haveCompleted: true };
+      return { ...state, isTimerActive: false, haveCompleted: true };
     case INCREMENT_SCORE:
       return { ...state, score: state.score + 5 };
     case INCREMENT_TURNS:
