@@ -1,0 +1,39 @@
+.card {
+  cursor: pointer;
+  border-radius: 0.875rem;
+  padding: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
+}
+
+.card__img {
+  width: 100%;
+  object-fit: contain;
+  aspect-ratio: 1 / 1;
+  background-color: white;
+}
+
+.card .card__front {
+  border-radius: 0.875rem;
+  padding: 0.5rem;
+  transform: rotateY(90deg);
+  transition: all ease-in 0.2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card-flipped .card__front {
+  transform: rotateY(0deg);
+  transition-delay: 0.2s;
+}
+
+.card .card__back {
+  transition: all ease-in 0.2s;
+  transition-delay: 0.2s;
+}
+
+.card-flipped .card__back {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}
