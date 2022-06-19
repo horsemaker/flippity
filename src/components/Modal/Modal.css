@@ -1,0 +1,21 @@
+.modal__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000033;
+}
+
+.modal {
+  max-width: 94vw;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
