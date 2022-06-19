@@ -1,1 +1,33 @@
- 
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.app {
+  font-family: "Rubik", sans-serif;
+  min-height: calc(100vh - 5rem);
+  display: flex;
+  flex-direction: column;
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 832px) {
+  .app {
+    min-height: calc(100vh - 3.75rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+}
