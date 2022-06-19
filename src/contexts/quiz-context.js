@@ -18,7 +18,7 @@ const QuizProvider = ({ children }) => {
     data: quizzes[0],
     turns: 0,
     score: 0,
-    time: 4,
+    time: 180,
     isTimerActive: true,
     haveCompleted: false,
   });
