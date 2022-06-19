@@ -19,7 +19,7 @@ const QuizProvider = ({ children }) => {
     turns: 0,
     score: 0,
     time: 180,
-    isTimerActive: true,
+    isTimerActive: false,
     haveCompleted: false,
   });
 
