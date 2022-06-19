@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
 import { Cards, FailureModal, SuccessModal } from "../../../components";
-import { INCREMENT_SCORE, INCREMENT_TURNS } from "../../../constants";
+import {
+  DEACTIVATE_TIMER,
+  INCREMENT_SCORE,
+  INCREMENT_TURNS,
+} from "../../../constants";
 import { useQuiz } from "../../../contexts";
 import { fisherYatesShuffler } from "./../../../utils";
 import "./Quiz.css";
+import { ACTIVATE_TIMER } from "./../../../constants/quiz-constants";
 
 const Quiz = () => {
   const { quiz } = useQuiz();
@@ -32,6 +37,7 @@ const Quiz = () => {
         })),
       ])
     );
+    dispatchQuiz({ type: DEACTIVATE_TIMER });
     setIsDisabled(true);
     const timeoutIdOne = setTimeout(
       () =>
@@ -45,13 +51,14 @@ const Quiz = () => {
         prevCurrentCards.map((card) => ({ ...card, isMatched: false }))
       );
       setIsDisabled(false);
+      dispatchQuiz({ type: ACTIVATE_TIMER });
     }, 5000);
 
     return () => {
       clearTimeout(timeoutIdOne);
       clearTimeout(timeoutIdTwo);
     };
-  }, [quiz.data]);
+  }, [quiz.data, dispatchQuiz]);
 
   useEffect(() => {
     let timeoutIdOne, timeoutIdTwo;
