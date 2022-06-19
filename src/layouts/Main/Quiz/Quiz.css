@@ -1,0 +1,12 @@
+.quiz {
+  max-width: 40rem;
+  flex-grow: 1;
+  margin: 1rem;
+}
+
+@media screen and (max-width: 832px) {
+  .quiz {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
